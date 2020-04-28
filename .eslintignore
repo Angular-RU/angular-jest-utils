@@ -1,9 +1,12 @@
 **/node_modules/**
 **/schematics/*
+tests/hello.ts
+**/*.spec.ts
 coverage/**
 .cache/**
 dist/**
 .git/**
 .idea/**
 **/*.js
-**/*.spec.ts
+tools/**
+lib/**
