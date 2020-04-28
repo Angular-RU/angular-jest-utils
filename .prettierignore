@@ -1,0 +1,7 @@
+**/src/schematics/**
+.idea/**
+.cache/**
+coverage/**
+**/node_modules/**
+dist/**
+lib/**

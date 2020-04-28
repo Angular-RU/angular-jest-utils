@@ -1,0 +1,3 @@
+{
+    "extends": ["github>Angular-RU/angular-renovate-config"]
+}

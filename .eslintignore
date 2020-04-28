@@ -1,0 +1,9 @@
+**/node_modules/**
+**/schematics/*
+coverage/**
+.cache/**
+dist/**
+.git/**
+.idea/**
+**/*.js
+**/*.spec.ts
