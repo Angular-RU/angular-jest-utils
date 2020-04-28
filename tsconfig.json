@@ -1,7 +1,7 @@
 {
     "extends": "@angular-ru/tsconfig",
     "compilerOptions": {
-        "baseUrl": "./",
+        "baseUrl": "./src",
         "declaration": true,
         "module": "commonjs",
         "target": "es5",
@@ -9,11 +9,7 @@
         "types": ["node", "jest"],
         "lib": ["es2015", "es2017", "es2018", "dom"],
         "typeRoots": ["./node_modules/@types"],
-        "paths": {
-            "@angular-jest-utils": ["./lib/index.js"],
-            "@angular-jest-utils/*": ["./lib/*"],
-            "@mock/*": ["./tests/*"]
-        }
+        "paths": { "@mock/*": ["../tests/*"] }
     },
     "files": ["./index.ts"],
     "include": ["src"],

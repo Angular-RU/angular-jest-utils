@@ -24,18 +24,25 @@ export function createTsJestConfig(options: JestConfigOptions): Config.InitialOp
 
     const tsconfig: Record<string, Any> = require(options.tsConfigRootPath);
     const { pathsToModuleNameMapper: resolver }: Any = require('ts-jest/utils');
+    const prefix: Record<string, Any> = {
+        prefix: `<rootDir>/${tsconfig?.compilerOptions?.baseUrl ?? ''}/`.replace(/\.\//g, '/').replace(/\/\/+/g, '/')
+    };
+
+    if (options.debug) {
+        // eslint-disable-next-line no-console,no-magic-numbers
+        console.log('[DEBUG]: prefix: ', JSON.stringify(prefix, null, 4), '\n');
+    }
+
     const rootModuleNameMapper: { [key: string]: string | string[] } = resolver(
         tsconfig?.compilerOptions?.paths ?? {},
-        {
-            prefix: `<rootDir>/${tsconfig?.baseUrl ?? ''}`
-        }
+        prefix
     );
 
     const moduleNameMapper: ModuleMapper = options.moduleNameMapper ?? rootModuleNameMapper;
 
     if (options.debug) {
         // eslint-disable-next-line no-console,no-magic-numbers
-        console.log('[DEBUG]: ', JSON.stringify(moduleNameMapper, null, 4));
+        console.log('[DEBUG]: ', JSON.stringify(moduleNameMapper, null, 4), '\n');
     }
 
     return {

@@ -33,9 +33,7 @@ describe('[TEST]: Hello world', () => {
                 }
             },
             moduleNameMapper: {
-                '^@angular\\-jest\\-utils$': '<rootDir>/./lib/index.js',
-                '^@angular\\-jest\\-utils/(.*)$': '<rootDir>/./lib/$1',
-                '^@mock/(.*)$': '<rootDir>/./tests/$1'
+                '^@mock/(.*)$': '<rootDir>/src/../tests/$1'
             },
             bail: 1,
             verbose: true,
