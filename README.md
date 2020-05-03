@@ -23,8 +23,8 @@ $ npm install @angular-ru/jest-utils -D
 Create `jest.config.js`
 
 ```ts
+const { createTsJestConfig } = require('@angular-ru/jest-utils');
 const path = require('path');
-const createTsJestConfig = require('@angular-ru/jest-utils').createTsJestConfig;
 
 module.exports = createTsJestConfig({
     rootDir: path.resolve('.'),
