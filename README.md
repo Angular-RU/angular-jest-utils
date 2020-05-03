@@ -38,3 +38,26 @@ module.exports = createTsJestConfig({
 ```bash
 $ jest --config jest.config.js --coverage
 ```
+
+### FAQ
+
+-   I have `jest-haste-map: Haste module naming collision`
+
+```ts
+module.exports = createTsJestConfig({
+    // ...
+    modulePathIgnorePatterns: ['<rootDir>/dist/']
+});
+```
+
+-   How can I define other properties that do not exist in `createTsJestConfig`?
+
+```ts
+// jest.config.js
+module.exports = {
+    ...createTsJestConfig({
+        // ...
+    }),
+    watch: true
+};
+```
