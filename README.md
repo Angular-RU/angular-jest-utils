@@ -8,7 +8,7 @@
     <img src="https://badge.fury.io/js/%40angular-ru%2Fjest-utils.svg" />
   </a>
   <a href="https://npm-stat.com/charts.html?package=%40angular-ru%2Fjest-utils&from=2019-09-01">
-    <img src="https://img.shields.io/npm/dt/@angular-ru/jest-utils.svg" />
+    <img src="https://img.shields.io/npm/dw/@angular-ru/jest-utils" />
   </a>
 </p>
 
