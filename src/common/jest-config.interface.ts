@@ -10,6 +10,8 @@ export interface JestConfigOptions {
     tsConfigSpecPath?: string;
     maxConcurrency?: number;
     setupFilesAfterEnv?: string[];
+    testPathIgnorePatterns?: string[];
+    modulePathIgnorePatterns?: string[];
     maxWorkers?: number | string;
     moduleNameMapper?: Record<string, string | string[]>;
 }

@@ -41,6 +41,8 @@ describe('[TEST]: Hello world', () => {
             cache: true,
             projects: ['<rootDir>'],
             testMatch: [],
+            modulePathIgnorePatterns: [],
+            testPathIgnorePatterns: ['/node_modules/', '/dist/'],
             preset: 'jest-preset-angular',
             displayName: 'Hello world',
             rootDir: expect.any(String),
