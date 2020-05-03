@@ -61,3 +61,12 @@ module.exports = {
     watch: true
 };
 ```
+
+-   How can I add setupFilesAfterEnv files?
+
+```ts
+module.exports = createTsJestConfig({
+    // ...
+    setupFilesAfterEnv: ['<rootDir>/setupJest.ts']
+});
+```
