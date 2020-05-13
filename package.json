@@ -24,7 +24,7 @@
     },
     "prettier": "@angular-ru/prettier-config",
     "dependencies": {
-        "@types/jest": "25.2.1",
+        "@types/jest": "25.2.2",
         "jest": "25.5.4",
         "jest-preset-angular": "8.2.0",
         "ts-jest": "25.5.1"
